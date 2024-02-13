@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
-        /* firstChatToUppercase();
+        /* firstCharToUppercase();
          * arrayList();
          * nestedArrayLists();
          * forEachLoop();
@@ -27,7 +27,7 @@ public class Main {
 
     }
 
-    private static void firstChatToUppercase() {
+    private static void firstCharToUppercase() {
         String name = "leon";
         name = name.substring(0, 1).toUpperCase() + name.substring(1);
         System.out.println(name);
