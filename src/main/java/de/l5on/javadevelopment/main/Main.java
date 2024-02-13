@@ -1,6 +1,7 @@
 package de.l5on.javadevelopment.main;
 
 import de.l5on.javadevelopment.oop.Car;
+import de.l5on.javadevelopment.oop.Garage;
 
 import java.util.ArrayList;
 
@@ -17,13 +18,18 @@ public class Main {
         Car audi = new Car("Audi", "R8", 2020, "black", 1928.99);
         Car bmw = new Car("BMW", "TT", 2019, "blue", 2228.99);
 
-        Car[] carCollection = new Car[2];
+        /* Car[] carCollection = new Car[2];
+         *
+         * carCollection[0] = audi;
+         * carCollection[1] = bmw;
+         *
+         * System.out.println(carCollection[0].getMake());
+         * System.out.println(carCollection[1].getMake());
+         */
 
-        carCollection[0] = audi;
-        carCollection[1] = bmw;
-
-        System.out.println(carCollection[0].getMake());
-        System.out.println(carCollection[1].getMake());
+        Garage garage = new Garage();
+        garage.park(audi);
+        garage.park(bmw);
 
     }
 
