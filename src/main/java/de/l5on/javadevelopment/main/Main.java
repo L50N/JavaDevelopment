@@ -30,6 +30,8 @@ public class Main {
         Garage garage = new Garage();
         garage.park(audi);
         garage.park(bmw);
+
+        audi.go();
     }
 
     private static void firstCharToUppercase() {

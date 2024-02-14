@@ -1,6 +1,6 @@
 package de.l5on.javadevelopment.oop;
 
-public class Car {
+public class Car extends Vehicle {
     private final String make;
     private final String model;
     private final int year;
