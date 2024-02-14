@@ -4,6 +4,7 @@ import de.l5on.javadevelopment.oop.Car;
 import de.l5on.javadevelopment.oop.Garage;
 
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -40,6 +41,8 @@ public class Main {
         garage.park(bmw);
 
         audi.go();
+
+        switchCase();
     }
 
     private static void firstCharToUppercase() {
@@ -127,7 +130,58 @@ public class Main {
         System.out.printf("Hello, %10s", "Leon");
     }
 
-    public void forAndWhileLoop() {
+    public static void randomIntBetweenARange() {
+        Scanner input = new Scanner(System.in);
+        Random random = new Random();
+
+        for (int i = 0; i == 0; ) {
+            System.out.println("[JavaDevelopment] Bis wohin soll die Zufallszahl gehen? (0-9999)");
+            int userInput = input.nextInt();
+
+            if (userInput >= 9999) {
+                System.out.println("[JavaDevelopment] Deine Angabe war zu hoch!");
+            } else if (userInput >= 0) {
+                System.out.println("[JavaDevelopment] Lass uns den Zufallsgenerator starten...");
+                int output = random.nextInt(userInput);
+                output++;
+                System.out.println(output);
+                i++;
+                break;
+            } else {
+                System.out.println("[JavaDevelopment] Deine Angabe war nicht gültig!");
+            }
+        }
+
+
+    }
+
+    public static void switchCase() {
+        String[] personOne = {"Max", "Mueller", "19"};
+        Scanner input = new Scanner(System.in);
+
+        for (int i = 0; i == 0; ) {
+            System.out.println("[JavaDevelopment] Willst du den Vornamen(1), den Nachnamen(2) oder eher das Alter(3) der Person wissen?");
+            int userInput = input.nextInt();
+            switch (userInput) {
+                case 1:
+                    System.out.println("[JavaDevelopment] Der Vorname der Person lautet: " + personOne[0]);
+                    i++;
+                    break;
+                case 2:
+                    System.out.println("[JavaDevelopment] Der Nachname der Person lautet: " + personOne[1]);
+                    i++;
+                    break;
+                case 3:
+                    System.out.printf("[JavaDevelopment] Die Person ist " + personOne[2] + " Jahre alt.");
+                    i++;
+                    break;
+                default:
+                    System.out.println("[JavaDevelopment] Deine Angabe war nicht gültig! Versuche es erneut..");
+            }
+        }
+    }
+
+    public static void forAndWhileLoop() {
         Scanner input = new Scanner(System.in);
 
         System.out.println("[JavaDevelopment] Wie oft soll die Schleife durchgangen werden? ");
@@ -157,34 +211,5 @@ public class Main {
         System.out.println("[JavaDevelopment] Schleife wurde beendet!");
 
         // Funfact: Everything that is possible with the "fori" loop is also possible with the "while" loop. the other way round is also possible. The question is always which is more useful and easier to read.
-    }
-
-    public void switchCase() {
-        String[] personOne = {"Max", "Mueller", "19"};
-        Scanner input = new Scanner(System.in);
-
-        System.out.println("[JavaDevelopment] Willst du den Vornamen(1), den Nachnamen(2) oder eher das Alter(3) der Person wissen?");
-        int userInput = input.nextInt();
-
-        for (int i = 0; i == 0; i++) {
-            switch (userInput) {
-                case 1:
-                    System.out.println("[JavaDevelopment] Der Vorname der Person lautet: " + personOne[0]);
-                    i++;
-                    break;
-                case 2:
-                    System.out.println("[JavaDevelopment] Der Nachname der Person lautet: " + personOne[1]);
-                    i++;
-                    break;
-                case 3:
-                    System.out.printf("[JavaDevelopment] Die Person ist %d Jahre alt.", personOne[3]);
-                    i++;
-                    break;
-                default:
-                    System.out.println("[JavaDevelopment] Deine Angabe war nicht gültig! Versuche es erneut..");
-                    break;
-            }
-        }
-        System.out.println("[JavaDevelopment] Deine Angabe war gültig - die Schleife wurde beendet!");
     }
 }
