@@ -1,7 +1,7 @@
 package de.l5on.javadevelopment.oop;
 
 public class Vehicle {
-    double speed;
+    private double speed;
 
     public void go() {
         System.out.println("This vehicle is moving...");

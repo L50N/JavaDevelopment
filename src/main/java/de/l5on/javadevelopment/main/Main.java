@@ -4,6 +4,7 @@ import de.l5on.javadevelopment.oop.Car;
 import de.l5on.javadevelopment.oop.Garage;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
 
@@ -13,6 +14,7 @@ public class Main {
          * nestedArrayLists();
          * forEachLoop();
          * printf();
+         * forAndWhileLoop();
          */
 
         Car audi = new Car("Audi", "R8", 2020, "black", 1928.99);
@@ -117,5 +119,37 @@ public class Main {
 
         // Printing with a minimum amount of characters
         System.out.printf("Hello, %10s", "Leon");
+    }
+
+    public void forAndWhileLoop() {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("[JavaDevelopment] Wie oft soll die Schleife durchgangen werden? ");
+        int userInput = input.nextInt();
+
+        for (int i = 0; i < userInput; i++) {
+            System.out.println(i);
+            if (i >= 9999) {
+                break;
+            }
+        }
+
+        /* otherwise, you can use the while loop to do exactly the same thing.
+         *
+         * int j = 0;
+         * while (j <= userInput) {
+         *    System.out.println(j);
+         *    if (j >= 9999) {
+         *        break;
+         *    } else {
+         *        j++;
+         *    }
+         * }
+         *
+         */
+
+        System.out.println("[JavaDevelopment] Schleife wurde beendet!");
+
+        // Funfact: Everything that is possible with the "fori" loop is also possible with the "while" loop. the other way round is also possible. the question is always which is more useful and easier to read.
     }
 }
