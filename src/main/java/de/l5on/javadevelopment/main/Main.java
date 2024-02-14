@@ -6,6 +6,12 @@ import de.l5on.javadevelopment.oop.Garage;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Author - L5ON
+ * GitHub - https://github.com/L50N
+ * Created - 17.12.2023
+ */
+
 public class Main {
 
     public static void main(String[] args) {
@@ -150,6 +156,35 @@ public class Main {
 
         System.out.println("[JavaDevelopment] Schleife wurde beendet!");
 
-        // Funfact: Everything that is possible with the "fori" loop is also possible with the "while" loop. the other way round is also possible. the question is always which is more useful and easier to read.
+        // Funfact: Everything that is possible with the "fori" loop is also possible with the "while" loop. the other way round is also possible. The question is always which is more useful and easier to read.
+    }
+
+    public void switchCase() {
+        String[] personOne = {"Max", "Mueller", "19"};
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("[JavaDevelopment] Willst du den Vornamen(1), den Nachnamen(2) oder eher das Alter(3) der Person wissen?");
+        int userInput = input.nextInt();
+
+        for (int i = 0; i == 0; i++) {
+            switch (userInput) {
+                case 1:
+                    System.out.println("[JavaDevelopment] Der Vorname der Person lautet: " + personOne[0]);
+                    i++;
+                    break;
+                case 2:
+                    System.out.println("[JavaDevelopment] Der Nachname der Person lautet: " + personOne[1]);
+                    i++;
+                    break;
+                case 3:
+                    System.out.printf("[JavaDevelopment] Die Person ist %d Jahre alt.", personOne[3]);
+                    i++;
+                    break;
+                default:
+                    System.out.println("[JavaDevelopment] Deine Angabe war nicht gültig! Versuche es erneut..");
+                    break;
+            }
+        }
+        System.out.println("[JavaDevelopment] Deine Angabe war gültig - die Schleife wurde beendet!");
     }
 }
