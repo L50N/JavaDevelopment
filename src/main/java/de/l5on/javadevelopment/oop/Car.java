@@ -15,6 +15,16 @@ public class Car extends Vehicle {
         this.price = price;
     }
 
+    @Override
+    public void go() {
+        System.out.println("The " + getMake() + " is moving...");
+    }
+
+    @Override
+    public void stop() {
+        System.out.println("The " + getMake() + " is stopping now...");
+    }
+
     public String toString() {
         return getMake() + "\n" + getModel() + "\n" + getYear() + "\n" + getColor() + "\n" + getPrice();
     }

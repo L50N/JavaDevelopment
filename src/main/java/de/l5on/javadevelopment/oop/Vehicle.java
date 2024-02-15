@@ -1,13 +1,7 @@
 package de.l5on.javadevelopment.oop;
 
-public class Vehicle {
-    private double speed;
+public abstract class Vehicle {
+    abstract void go();
 
-    public void go() {
-        System.out.println("This vehicle is moving...");
-    }
-
-    public void stop() {
-        System.out.println("This vehicle is stopped...");
-    }
+    abstract void stop();
 }

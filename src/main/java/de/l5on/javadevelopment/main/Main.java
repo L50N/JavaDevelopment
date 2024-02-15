@@ -41,8 +41,6 @@ public class Main {
         garage.park(bmw);
 
         audi.go();
-
-        switchCase();
     }
 
     private static void firstCharToUppercase() {
@@ -130,7 +128,7 @@ public class Main {
         System.out.printf("Hello, %10s", "Leon");
     }
 
-    public static void randomIntBetweenARange() {
+    private static void randomIntBetweenARange() {
         Scanner input = new Scanner(System.in);
         Random random = new Random();
 
@@ -152,10 +150,9 @@ public class Main {
             }
         }
 
-
     }
 
-    public static void switchCase() {
+    private static void switchCase() {
         String[] personOne = {"Max", "Mueller", "19"};
         Scanner input = new Scanner(System.in);
 
@@ -181,7 +178,7 @@ public class Main {
         }
     }
 
-    public static void forAndWhileLoop() {
+    private static void forAndWhileLoop() {
         Scanner input = new Scanner(System.in);
 
         System.out.println("[JavaDevelopment] Wie oft soll die Schleife durchgangen werden? ");
