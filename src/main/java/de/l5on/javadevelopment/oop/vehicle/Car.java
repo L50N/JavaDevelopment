@@ -1,4 +1,4 @@
-package de.l5on.javadevelopment.oop;
+package de.l5on.javadevelopment.oop.vehicle;
 
 public class Car extends Vehicle {
     private final String make;

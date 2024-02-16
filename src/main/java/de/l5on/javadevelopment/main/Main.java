@@ -1,7 +1,10 @@
 package de.l5on.javadevelopment.main;
 
-import de.l5on.javadevelopment.oop.Car;
-import de.l5on.javadevelopment.oop.Garage;
+import de.l5on.javadevelopment.oop.animal.Animal;
+import de.l5on.javadevelopment.oop.animal.Cat;
+import de.l5on.javadevelopment.oop.animal.Dog;
+import de.l5on.javadevelopment.oop.vehicle.Car;
+import de.l5on.javadevelopment.oop.vehicle.Garage;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -14,7 +17,6 @@ import java.util.Scanner;
  */
 
 public class Main {
-
     public static void main(String[] args) {
         /* firstCharToUppercase();
          * arrayList();
@@ -22,6 +24,7 @@ public class Main {
          * forEachLoop();
          * printf();
          * forAndWhileLoop();
+         * letTheAnimalSpeak();
          */
 
         Car audi = new Car("Audi", "R8", 2020, "black", 1928.99);
@@ -41,6 +44,7 @@ public class Main {
         garage.park(bmw);
 
         audi.go();
+
     }
 
     private static void firstCharToUppercase() {
@@ -208,5 +212,29 @@ public class Main {
         System.out.println("[JavaDevelopment] Schleife wurde beendet!");
 
         // Funfact: Everything that is possible with the "fori" loop is also possible with the "while" loop. the other way round is also possible. The question is always which is more useful and easier to read.
+    }
+
+    private static void letTheAnimalSpeak() {
+        Scanner input = new Scanner(System.in);
+        Animal animal;
+
+        System.out.println("Which animal would you like to have?");
+        System.out.print("Would you like to have a dog(1) or rather a cat(2)? ");
+        int userInput = input.nextInt();
+
+        switch (userInput) {
+            case 1:
+                animal = new Dog();
+                System.out.println(animal.speak());
+                break;
+            case 2:
+                animal = new Cat();
+                System.out.println(animal.speak());
+                break;
+            default:
+                animal = new Animal();
+                System.out.println(animal.speak());
+                break;
+        }
     }
 }
